@@ -1,4 +1,6 @@
+pandas
 yfinance
 numpy
-pandas
+os
 matplotlib
+datetime

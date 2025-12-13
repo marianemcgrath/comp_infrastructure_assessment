@@ -1,5 +1,4 @@
-
-
+#! /usr/bin/env python3
 
 # Import yfinance and getting the data ready to run
 import yfinance as yf
