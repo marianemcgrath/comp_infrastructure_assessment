@@ -5,8 +5,8 @@ name: Run faang script and commit changes
 
 on:
   schedule:
-    # Runs every Wednesday at 11:55 PM UTC
-    - cron: '55 23 * * 3'
+    # Runs every Thursday at 12:01 AM UTC
+    - cron: '01 00 * * 4'
   workflow_dispatch:
 
 permissions:
