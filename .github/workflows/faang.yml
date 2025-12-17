@@ -4,13 +4,12 @@
 name: Weekly FAANG Update
 
 on:
-    schedule:
-    - cron: 05 23 * * 3  # Every Wednesday at 11:00 PM UTC
+  schedule:
+    - cron: '15 23 * * Wed'  # Every Wednesday at 11:15 PM UTC
 
 jobs:
   run-script-and-commit:
     runs-on: ubuntu-latest
-    
     permissions:
       contents: write  # Required for pushing commits
 
@@ -18,16 +17,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-            token: ${{ secrets.GITHUB_TOKEN }} # Use the automatically provided token
-            fetch-depth: 0  # Full history for commits
+          fetch-depth: 0  # Full history for safer pushing
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.x'  # Use latest Python 3
-        
-      - name: Install dependencies
-        run: pip install -r requirements.txt || true  # Ignore if requirements.txt does not exist
 
       - name: Run faang.py
         run: python faang.py
