@@ -5,15 +5,15 @@ name: Run faang script and commit changes
 
 on:
   schedule:
-    # Runs every Saturday at 11:30 PM (UTC)
-    - cron: '30 23 * * 6'
+    # Runs every Wednesday at 11:40 PM UTC
+    - cron: '40 23 * * 3'
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  run-download:
+  run-script:
     runs-on: ubuntu-latest
 
     steps:
@@ -24,6 +24,11 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
       - name: Run faang.py
         run: python faang.py
