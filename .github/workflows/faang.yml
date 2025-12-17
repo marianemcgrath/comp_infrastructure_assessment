@@ -5,8 +5,8 @@ name: Run faang script and commit changes
 
 on:
   schedule:
-    # Runs every Wednesday at 11:40 PM UTC
-    - cron: '40 23 * * 3'
+    # Runs every Wednesday at 11:55 PM UTC
+    - cron: '55 23 * * 3'
   workflow_dispatch:
 
 permissions:
@@ -23,7 +23,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
+          python-version: '3.x' # Use the latest Python 3 version
 
       - name: Install dependencies
         run: |
