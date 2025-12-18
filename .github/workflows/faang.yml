@@ -1,12 +1,12 @@
-# Adapted from Grok:
-# https://grok.com/share/c2hhcmQtMw_5b771246-8802-43e7-82b3-d3be092ff0d0
+# Adapted from ChatGPT:
+# https://chatgpt.com/s/t_6943472eae7c8191b9bdd9a841773044
 
 name: Run faang script and commit changes
 
 on:
   schedule:
-    # Runs every Thursday at 12:01 AM UTC
-    - cron: '01 00 * * 4'
+    # https://crontab.guru/#00_09_*_*_4  
+    - cron: '00 09 * * 4'  # Runs every Thursday at 9:00 AM UTC
   workflow_dispatch:
 
 permissions:
