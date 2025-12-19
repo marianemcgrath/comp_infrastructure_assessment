@@ -31,7 +31,7 @@ ax.set_ylabel('Price')
 ax.legend(['META', 'AAPL', 'AMZN', 'NFLX', 'GOOG'])
 
 # Filename with today's date
-filename_png = 'plots/FAANG_closing_prices_' + now.strftime('%Y%m%d_%H%M%S') + '.png'
+filename_png = 'plots/' + now.strftime('%Y%m%d_%H%M%S') + '.png'
 
 # Save figure as an image file as today's date
 fig.savefig(filename_png, dpi=300)
