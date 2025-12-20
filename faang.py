@@ -21,7 +21,8 @@ def get_data():
     
     return df
 
-def plot_data():    
+def plot_data():
+    now = dt.datetime.now()      
     data_files = os.listdir('data')
     data_files = [f for f in data_files if f.endswith('.csv')]
     data_files.sort(reverse=True)
@@ -34,11 +35,10 @@ def plot_data():
     
     closing_data = data['Close']
     
-    now = dt.datetime.now()
     fig, ax = plt.subplots(figsize=(12, 6))
     closing_data.plot(ax=ax)
 
-    ax.set_title(f'FAANG Stock Closing Prices - {now.strftime("%d-%m-%Y")}')
+    ax.set_title(f'FAANG Stock Closing Prices last 5 days (as of {now.strftime("%d-%m-%Y")})')
     ax.set_xlabel('Date and Time')
     ax.set_ylabel('Closing Price (USD)')
     ax.grid(True, alpha=0.3)
@@ -54,5 +54,5 @@ if __name__ == "__main__":
     get_data()
     plot_data()
 
-
+# Adapted from class videos and materials. Lines 53 to 55 suggested by Claude AI.
 # Source: https://stackoverflow.com/questions/419163/what-does-if-name-main-do
