@@ -27,18 +27,18 @@ def plot_data():
     data_files.sort(reverse=True)
     latest_file = data_files[0]
 
-    df = pd.read_csv(f'data/{latest_file}', header=[0, 1], index_col=0, parse_dates=True)
+    data = pd.read_csv(f'data/{latest_file}', header=[0, 1], index_col=0, parse_dates=True)
 
     if not os.path.exists('plots'):
         os.makedirs('plots')
     
-    closing_data = df['Close']
+    closing_data = data['Close']
     
     now = dt.datetime.now()
     fig, ax = plt.subplots(figsize=(12, 6))
     closing_data.plot(ax=ax)
 
-    ax.set_title(f'FAANG Stock Closing Prices - {now.strftime("%Y-%m-%d")}')
+    ax.set_title(f'FAANG Stock Closing Prices - {now.strftime("%d-%m-%Y")}')
     ax.set_xlabel('Date and Time')
     ax.set_ylabel('Closing Price (USD)')
     ax.grid(True, alpha=0.3)
@@ -53,5 +53,6 @@ def plot_data():
 if __name__ == "__main__":
     get_data()
     plot_data()
+
 
 # Source: https://stackoverflow.com/questions/419163/what-does-if-name-main-do
