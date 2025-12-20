@@ -1,44 +1,44 @@
-# Project: Computer Infrastructures
-Author: Mariane McGrath
+# FAANG Stock Data Pipeline
 
-## Overview🌇
+This repository completes the Computing Infrastructure module assessment (Winter 25/26) at ATU. It demonstrates:
 
-## Usage Instructions 🚀
+- Fetching hourly stock data for FAANG companies (META, AAPL, AMZN, NFLX, GOOG) using `yfinance`.
+- Saving data to CSV files and plotting closing prices.
+- Creating an executable Python script.
+- Automating weekly runs via GitHub Actions.
 
-## Requirements ⚙️
+The core work is explained in detail in [`problems.ipynb`](https://github.com/marianemcgrath/comp_infrastructure_assessment/blob/main/problems.ipynb), including code breakdowns, research references, and explanations.
 
-## Table of Contents 📑
+## Setup and Running
 
-## Tasks 📚
-### Problem 1: Data from yfinance
-Using the yfinance Python package, write a function called get_data() that downloads all hourly data for the previous five days for the five FAANG stocks:
-•	Facebook (META)
-•	Apple (AAPL)
-•	Amazon (AMZN)
-•	Netflix (NFLX)
-•	Google (GOOG)
-The function should save the data into a folder called data in the root of your repository using a filename with the format YYYYMMDD-HHmmss.csv where YYYYMMDD is the four-digit year (e.g. 2025), followed by the two-digit month (e.g. 09 for September), followed by the two-digit day, and HHmmss is hour, minutes, seconds. Create the data folder if you don't already have one.
+1. Clone the repository:
 
-### Problem 2: Plotting Data
-Write a function called plot_data() that opens the latest data file in the data folder and, on one plot, plots the Close prices for each of the five stocks. The plot should include axis labels, a legend, and the date as a title. The function should save the plot into a plots folder in the root of your repository using a filename in the format YYYYMMDD-HHmmss.png. Create the plots folder if you don't already have one.
+  git clone https://github.com/marianemcgrath/comp_infrastructure_assessment.git
+  
+  cd comp_infrastructure_assessment
 
-### Problem 3: Script
-Create a Python script called faang.py in the root of your repository. Copy the above functions into it and it so that whenever someone at the terminal types ./faang.py, the script runs, downloading the data and creating the plot. Note that this will require a shebang line and the script to be marked executable. Explain the steps you took in your notebook.
+2. Install dependencies:
 
-### Problem 4: Automation
-Create a GitHub Actions workflow to run your script every Saturday morning. The script should be called faang.yml in a .github/workflows/ folder in the root of your repository. In your notebook, explain each of the individual lines in your workflow.
+  pip install -r requirements.txt
 
-## Main Resources 📝
-Various resources were consulted to aid learning and ensure best practices. Each step of the project includes its own references and hyperlinks.
+3. Run the script (downloads latest data and generates a plot):
 
-Key references include:
+  **./faang.py**
+  **pyton faang.py**
 
+- Data files are saved in `/data` (CSV format: `YYYYMMDD-HHmmss.csv`).
+- Plots are saved in `/plots` (PNG format: `YYYYMMDD-HHmmss.png`).
 
-## Contact 📫
- - Mariane McGrath
- - Email: G00473468@atu.ie
- - LinkedIn: /marianemcgrath
-   Feel free to reach out with questions or feedback!
+4. View the latest plot and data in the respective folders.
 
-## License 📜
-This project is for educational purposes as part of the Programming and Scripting course at ATU. Feel free to reference or adapt, but please avoid plagiarism.
+## Automation
+
+A GitHub Actions workflow (`.github/workflows/faang.yml`) runs `faang.py` every Saturday morning, committing new data and plots automatically.
+
+## Author
+
+Mariane McGrath  
+Email: G00473468@atu.ie  
+LinkedIn: [marianemcgrath](https://www.linkedin.com/in/marianemcgrath)
+
+This project is for educational purposes. References are included inline in the notebook.
