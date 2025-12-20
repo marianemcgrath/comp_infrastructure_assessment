@@ -2,8 +2,6 @@
 
 **Computing Infrastructure Module Assessment**
 
-## Tasks:
-
 ### Problem 1: Data from yfinance
 
 Using the yfinance Python package, write a function called get_data() that downloads all hourly data for the previous five days for the five FAANG stocks:
@@ -24,20 +22,19 @@ The function should save the data into a folder called data in the root of your 
 
 Write a function called plot_data() that opens the latest data file in the data folder and, on one plot, plots the Close prices for each of the five stocks. The plot should include axis labels, a legend, and the date as a title. The function should save the plot into a plots folder in the root of your repository using a filename in the format YYYYMMDD-HHmmss.png. Create the plots folder if you don't already have one.
 
-![alt text](image-1.png)
+![plot example](/workspaces/comp_infrastructure_assessment/images/plot_2025-12-20_225527.png)
 
 ### Problem 3: Script
 
 Create a Python script called faang.py in the root of your repository. Copy the above functions into it and it so that whenever someone at the terminal types ./faang.py, the script runs, downloading the data and creating the plot. Note that this will require a shebang line and the script to be marked executable. Explain the steps you took in your notebook.
 
-![alt text](image-2.png)
+![Script](/workspaces/comp_infrastructure_assessment/images/image-2.png)
 
 ### Problem 4: Automation
 
 Create a GitHub Actions workflow to run your script every Saturday morning. The script should be called faang.yml in a .github/workflows/ folder in the root of your repository. In your notebook, explain each of the individual lines in your workflow.
 
-![alt text](image.png)
-
+![Workflow](https://github.com/marianemcgrath/comp_infrastructure_assessment/blob/22f2fcca8bbf231807669c4a34c12eb937e01f5f/images/workflow_run.png)
 
 **This repository:**
 
@@ -50,8 +47,8 @@ The core work is explained in detail in [`problems.ipynb`](https://github.com/ma
 
 ## Quick Demo
 
-- Latest data: See the most recent CSV in [`data/`](data/)
-- Latest plot: See the most recent PNG in [`plots/`](plots/)
+- Latest data: See the most recent CSV in [`data/`](https://github.com/marianemcgrath/comp_infrastructure_assessment/tree/main/data)
+- Latest plot: See the most recent PNG in [`plots/`](https://github.com/marianemcgrath/comp_infrastructure_assessment/tree/main/plots)
 - Workflow runs: Check [.github/workflows/faang.yml](https://github.com/marianemcgrath/comp_infrastructure_assessment/blob/main/.github/workflows/faang.yml) and commit history for automated updates
 
 The `data/` and `plots/` folders contain historical outputs. The latest files always have the most recent timestamps.
@@ -71,8 +68,12 @@ The `data/` and `plots/` folders contain historical outputs. The latest files al
 
 3. Run the script (downloads latest data and generates a plot):
 
-  **./faang.py**
-  **pyton faang.py**
+   ```bash
+   ./faang.py
+
+   or
+   
+   pyton faang.py ()
 
 - Data files are saved in `/data` (CSV format: `YYYYMMDD-HHmmss.csv`).
 - Plots are saved in `/plots` (PNG format: `YYYYMMDD-HHmmss.png`).
