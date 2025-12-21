@@ -1,6 +1,6 @@
 # FAANG Stock Data
 
-**Computer Infrastructure Module Assessment**
+**Computer Infrastructure Assessment**
 
 ### Problem 1: Data from yfinance
 
@@ -73,7 +73,7 @@ The `data/` and `plots/` folders contain historical outputs. The latest files al
 
    or
 
-   python faang.py
+   python faang.py (No permissions required to run)
 
 - Data files are saved in `/data` (CSV format: `YYYYMMDD-HHmmss.csv`).
 - Plots are saved in `/plots` (PNG format: `YYYYMMDD-HHmmss.png`).
