@@ -22,13 +22,13 @@ The function should save the data into a folder called data in the root of your 
 
 Write a function called plot_data() that opens the latest data file in the data folder and, on one plot, plots the Close prices for each of the five stocks. The plot should include axis labels, a legend, and the date as a title. The function should save the plot into a plots folder in the root of your repository using a filename in the format YYYYMMDD-HHmmss.png. Create the plots folder if you don't already have one.
 
-![plot example](/workspaces/comp_infrastructure_assessment/images/plot_2025-12-20_225527.png)
+![plot example](https://github.com/marianemcgrath/comp_infrastructure_assessment/blob/22f2fcca8bbf231807669c4a34c12eb937e01f5f/images/plot_2025-12-20_225527.png)
 
 ### Problem 3: Script
 
 Create a Python script called faang.py in the root of your repository. Copy the above functions into it and it so that whenever someone at the terminal types ./faang.py, the script runs, downloading the data and creating the plot. Note that this will require a shebang line and the script to be marked executable. Explain the steps you took in your notebook.
 
-![Script](/workspaces/comp_infrastructure_assessment/images/image-2.png)
+![Script](https://github.com/marianemcgrath/comp_infrastructure_assessment/blob/22f2fcca8bbf231807669c4a34c12eb937e01f5f/images/image-2.png)
 
 ### Problem 4: Automation
 
@@ -72,8 +72,8 @@ The `data/` and `plots/` folders contain historical outputs. The latest files al
    ./faang.py
 
    or
-   
-   pyton faang.py ()
+
+   python faang.py
 
 - Data files are saved in `/data` (CSV format: `YYYYMMDD-HHmmss.csv`).
 - Plots are saved in `/plots` (PNG format: `YYYYMMDD-HHmmss.png`).
@@ -92,4 +92,4 @@ Mariane McGrath
 Email: G00473468@atu.ie  
 LinkedIn: [marianemcgrath](https://www.linkedin.com/in/marianemcgrath)
 
-This project is for educational purposes. References are included inline in the notebook.
+This project is for educational purposes. References are included throughout the notebook.
