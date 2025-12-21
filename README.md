@@ -1,6 +1,6 @@
 # FAANG Stock Data
 
-**Computing Infrastructure Module Assessment**
+**Computer Infrastructure Module Assessment**
 
 ### Problem 1: Data from yfinance
 
@@ -16,7 +16,7 @@ Using the yfinance Python package, write a function called get_data() that downl
 
 •	Google (GOOG)
 
-The function should save the data into a folder called data in the root of your repository using a filename with the format YYYYMMDD-HHmmss.csv where YYYYMMDD is the four-digit year (e.g. 2025), followed by the two-digit month (e.g. 09 for September), followed by the two digit day, and HHmmss is hour, minutes, seconds. Create the data folder if you don't already have one.
+The function should save the data into a folder called 'data' in the root of your repository, using a filename with the format YYYYMMDD-HHmmss.csv - where YYYYMMDD is the four-digit year (e.g. 2025), followed by the two-digit month (e.g. 09 for September), followed by the two digit day, and HHmmss is hour, minutes, seconds. Create the data folder if you don't already have one.
 
 ### Problem 2: Plotting Data
 
@@ -38,7 +38,7 @@ Create a GitHub Actions workflow to run your script every Saturday morning. The 
 
 **This repository:**
 
-- Fetching hourly stock data for FAANG companies (META, AAPL, AMZN, NFLX, GOOG) using `yfinance`.
+- Downloading hourly stock data for FAANG companies (META, AAPL, AMZN, NFLX, GOOG) using `yfinance`.
 - Saving data to CSV files and plotting closing prices.
 - Creating an executable Python script.
 - Automating weekly runs via GitHub Actions.
