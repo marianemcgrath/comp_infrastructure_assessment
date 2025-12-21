@@ -5,8 +5,8 @@ name: Run faang script and commit changes
 
 on:
   schedule:
-    # https://crontab.guru/#40_10_*_*_0
-    - cron: '40 10 * * 0'  # Runs every Sunday at 10:40 AM UTC
+    # https://crontab.guru/#*_11_*_*_0
+    - cron: '0 11 * * Sun'  # Runs every Sunday at 11:00 AM UTC
   workflow_dispatch:
 
 permissions:
